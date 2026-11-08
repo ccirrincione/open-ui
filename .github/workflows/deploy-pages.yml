@@ -1,5 +1,5 @@
 # Publishes the teaser (site/) to GitHub Pages. PRs only run the build.
-# Delete this file with site/ once the app is live on its new host (see README).
+# Delete this file with site/ once the app is live on its new host (see plans/app-migration/plan.md).
 name: Deploy teaser
 
 on:
