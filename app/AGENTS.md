@@ -6,6 +6,10 @@ The full frontend, built with SvelteKit and Tailwind. It is not deployed yet: `p
 
 - `pnpm dev` starts the dev server.
 - `pnpm check` type-checks the app.
+- `pnpm format` formats the code with Prettier.
+- `pnpm format:check` checks formatting without writing.
+- `pnpm lint` runs ESLint.
+- `pnpm test` runs the Vitest tests.
 - `pnpm build` produces a production build.
 
-CI runs `pnpm check` and `pnpm build` whenever `app/` changes.
+CI runs `pnpm format:check`, `pnpm lint`, `pnpm check`, `pnpm test` and `pnpm build` whenever `app/` changes.
