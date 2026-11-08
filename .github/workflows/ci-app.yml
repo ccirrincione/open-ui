@@ -1,0 +1,39 @@
+# Type-checks and builds the SvelteKit app (app/). Never deploys.
+name: App CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - ".nvmrc"
+      - ".github/workflows/ci-app.yml"
+  pull_request:
+    paths:
+      - "app/**"
+      - ".nvmrc"
+      - ".github/workflows/ci-app.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          package_json_file: app/package.json
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+          cache-dependency-path: app/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm build

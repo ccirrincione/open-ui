@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found · Open UI</title>
+    <meta name="robots" content="noindex" />
+    <!--
+      GitHub Pages serves this file at whatever URL was missed, however deep, so relative
+      links need a base. This works under /open-ui/ now and at the root on a custom domain.
+      The assets are added here so the browser never requests them from the missed URL.
+    -->
+    <script>
+      const root = location.pathname.startsWith("/open-ui/") ? "/open-ui/" : "/";
+      document.head.insertAdjacentHTML(
+        "beforeend",
+        `<base href="${root}">
+         <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+         <link rel="stylesheet" href="assets/css/main.css">`,
+      );
+    </script>
+  </head>
+  <body class="flex min-h-dvh flex-col items-center justify-center bg-paper px-6 font-body text-ink antialiased">
+    <h1 class="font-display text-4xl font-bold tracking-tight">Page not found</h1>
+    <a href="./" class="mt-6 font-medium text-brand hover:underline">Back to home</a>
+  </body>
+</html>

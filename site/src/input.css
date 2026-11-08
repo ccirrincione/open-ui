@@ -1,0 +1,15 @@
+@import "tailwindcss" source("../public");
+
+/* Placeholder design tokens. Copy this block into app/src/routes/layout.css at swap time. */
+@theme {
+  --color-paper: #fafaf9;
+  --color-ink: #1c1917;
+  --color-muted: #57534e;
+  --color-line: #e7e5e4;
+  --color-brand: #4338ca;
+
+  --font-display: ui-sans-serif, system-ui, sans-serif;
+  --font-body: ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 0.75rem;
+}
