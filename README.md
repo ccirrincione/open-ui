@@ -42,3 +42,9 @@ Add the domain under Settings → Pages and create the DNS records GitHub lists 
 3. Deploy `app/` (root directory `app`) and test it on the host's own URL while the teaser stays live.
 4. Point the custom domain at the new host. This is the actual switch. To roll back, point it back at GitHub Pages.
 5. Once the app is stable, delete `site/` and `.github/workflows/deploy-pages.yml` in one PR, then turn off GitHub Pages in the repo settings.
+
+## License
+
+Copyright (c) 2026 The open-ui Contributors.
+
+open-ui is licensed under the [GNU Affero General Public License v3.0 or later](LICENSE) (`AGPL-3.0-or-later`).
