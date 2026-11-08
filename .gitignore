@@ -5,4 +5,5 @@ node_modules/
 !.env.example
 
 # Local Claude Code state
-.claude/
+.claude/worktrees/
+.claude/settings.local.json

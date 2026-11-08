@@ -1,4 +1,4 @@
-# Type-checks and builds the SvelteKit app (app/). Never deploys.
+# Checks formatting, lints, type-checks, tests and builds the SvelteKit app (app/). Never deploys.
 name: App CI
 
 on:
@@ -35,5 +35,8 @@ jobs:
           cache: pnpm
           cache-dependency-path: app/pnpm-lock.yaml
       - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm lint
       - run: pnpm check
+      - run: pnpm test
       - run: pnpm build

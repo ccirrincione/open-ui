@@ -31,17 +31,9 @@ pnpm dev
 
 Keep `tailwindcss` on the same exact version in both projects until the teaser is removed.
 
-## Custom domain for the teaser
+## Plans
 
-Add the domain under Settings → Pages and create the DNS records GitHub lists there. No `CNAME` file is needed, and the teaser's links already work at the domain root. Share the custom domain rather than the `github.io` URL, because only the domain can follow the site to its new host.
-
-## Moving to the full app
-
-1. Choose a host and replace `adapter-auto` in `app/` with that host's adapter.
-2. Copy the `@theme` block from `site/src/input.css` into `app/src/routes/layout.css`. Any teaser markup you want to keep can be pasted into Svelte components.
-3. Deploy `app/` (root directory `app`) and test it on the host's own URL while the teaser stays live.
-4. Point the custom domain at the new host. This is the actual switch. To roll back, point it back at GitHub Pages.
-5. Once the app is stable, delete `site/` and `.github/workflows/deploy-pages.yml` in one PR, then turn off GitHub Pages in the repo settings.
+Larger units of work live in [`plans/`](plans/AGENTS.md), including the [move from the teaser to the full app](plans/app-migration/plan.md).
 
 ## License
 
