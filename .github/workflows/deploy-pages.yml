@@ -10,12 +10,8 @@ on:
       - "!site/AGENTS.md"
       - ".nvmrc"
       - ".github/workflows/deploy-pages.yml"
+  # No paths filter: this is a required check, and a skipped required check blocks the PR forever.
   pull_request:
-    paths:
-      - "site/**"
-      - "!site/AGENTS.md"
-      - ".nvmrc"
-      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -26,7 +22,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  teaser-build:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -49,7 +45,7 @@ jobs:
 
   deploy:
     if: github.event_name != 'pull_request'
-    needs: build
+    needs: teaser-build
     runs-on: ubuntu-latest
     permissions:
       pages: write

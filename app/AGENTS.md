@@ -12,4 +12,8 @@ The full frontend, built with SvelteKit and Tailwind. It is not deployed yet: `p
 - `pnpm test` runs the Vitest tests.
 - `pnpm build` produces a production build.
 
-CI runs `pnpm format:check`, `pnpm lint`, `pnpm check`, `pnpm test` and `pnpm build` whenever `app/` changes.
+CI runs `pnpm format:check`, `pnpm lint`, `pnpm check`, `pnpm test` and `pnpm build` on every PR, and on pushes to `main` that change `app/`.
+
+## Pre-commit hook
+
+`pnpm install` enables `.githooks/pre-commit`, which runs Prettier and ESLint on staged `app/` files. It only reports problems: run `pnpm format` or fix the lint errors, then stage the result. Without `node_modules`, as in a fresh worktree, it warns and skips, and CI still runs the same checks.
