@@ -8,18 +8,15 @@ on:
       - "app/**"
       - ".nvmrc"
       - ".github/workflows/ci-app.yml"
+  # No paths filter: this is a required check, and a skipped required check blocks the PR forever.
   pull_request:
-    paths:
-      - "app/**"
-      - ".nvmrc"
-      - ".github/workflows/ci-app.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  build:
+  app-checks:
     runs-on: ubuntu-latest
     defaults:
       run:
