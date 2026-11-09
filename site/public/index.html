@@ -3,61 +3,172 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Open UI</title>
-    <meta name="description" content="Placeholder description." />
+    <title>OPEN: Open Pickleball Evaluation Network</title>
+    <meta name="description" content="Your pickleball rating, always free." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://openpb.org/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OPEN" />
+    <meta property="og:title" content="OPEN: Open Pickleball Evaluation Network" />
+    <meta property="og:description" content="Your pickleball rating, always free." />
+    <meta property="og:url" content="https://openpb.org/" />
+    <meta property="og:image" content="https://openpb.org/assets/img/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="The OPEN wordmark above the curved surface of a pickleball rising out of black"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OPEN: Open Pickleball Evaluation Network" />
+    <meta name="twitter:description" content="Your pickleball rating, always free." />
+    <meta name="twitter:image" content="https://openpb.org/assets/img/og.jpg" />
+
+    <link rel="icon" href="./assets/img/favicon-48.png" sizes="48x48" type="image/png" />
     <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png" />
+
+    <link
+      rel="preload"
+      href="./assets/fonts/krona-one-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/instrument-sans-latin-var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
-  <body class="flex min-h-dvh flex-col bg-paper font-body text-ink antialiased">
-    <header class="border-b border-line">
-      <div class="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
-        <a href="./" class="font-display text-lg font-semibold">Open UI</a>
-        <a href="#cta" class="text-sm font-medium text-brand hover:underline">Call to action</a>
-      </div>
-    </header>
+  <body class="bg-primary font-body text-secondary antialiased">
+    <div
+      class="relative isolate grid min-h-screen min-h-svh grid-rows-[43.68fr_12.32fr_44fr] overflow-hidden art-land:grid-rows-[34.32fr_9.68fr_56fr] art-wide:grid-rows-[31.2fr_8.8fr_60fr] short:art-land:grid-rows-[40.48fr_3.52fr_56fr] short:art-wide:grid-rows-[36.8fr_3.2fr_60fr]"
+    >
+      <main class="row-start-1 self-center">
+        <!--
+          Each render has the aspect ratio at the low end of its range, so wider screens only ever
+          crop top and bottom, never the sides. The object-position y value is the crest's height
+          in that render, which holds the horizon at the same place through the crop.
+        -->
+        <picture class="absolute inset-0 -z-10">
+          <source
+            media="(min-aspect-ratio: 2/1)"
+            type="image/avif"
+            srcset="
+              ./assets/img/horizon-wide-1600.avif 1600w,
+              ./assets/img/horizon-wide-2560.avif 2560w,
+              ./assets/img/horizon-wide-3840.avif 3840w
+            "
+            sizes="100vw"
+            width="3840"
+            height="1920"
+          />
+          <source
+            media="(min-aspect-ratio: 2/1)"
+            type="image/jpeg"
+            srcset="
+              ./assets/img/horizon-wide-1600.jpg 1600w,
+              ./assets/img/horizon-wide-2560.jpg 2560w,
+              ./assets/img/horizon-wide-3840.jpg 3840w
+            "
+            sizes="100vw"
+            width="3840"
+            height="1920"
+          />
+          <source
+            media="(min-aspect-ratio: 1/1)"
+            type="image/avif"
+            srcset="
+              ./assets/img/horizon-land-1280.avif 1280w,
+              ./assets/img/horizon-land-1920.avif 1920w,
+              ./assets/img/horizon-land-2560.avif 2560w,
+              ./assets/img/horizon-land-3840.avif 3840w
+            "
+            sizes="100vw"
+            width="3840"
+            height="3840"
+          />
+          <source
+            media="(min-aspect-ratio: 1/1)"
+            type="image/jpeg"
+            srcset="
+              ./assets/img/horizon-land-1280.jpg 1280w,
+              ./assets/img/horizon-land-1920.jpg 1920w,
+              ./assets/img/horizon-land-2560.jpg 2560w,
+              ./assets/img/horizon-land-3840.jpg 3840w
+            "
+            sizes="100vw"
+            width="3840"
+            height="3840"
+          />
+          <source
+            type="image/avif"
+            srcset="
+              ./assets/img/horizon-tall-640.avif   640w,
+              ./assets/img/horizon-tall-828.avif   828w,
+              ./assets/img/horizon-tall-1290.avif 1290w,
+              ./assets/img/horizon-tall-2048.avif 2048w
+            "
+            sizes="100vw"
+            width="2048"
+            height="5120"
+          />
+          <img
+            class="h-full w-full object-cover object-[47%_56%] art-land:object-[50%_44%] art-wide:object-[50%_40%]"
+            src="./assets/img/horizon-tall-828.jpg"
+            srcset="
+              ./assets/img/horizon-tall-640.jpg   640w,
+              ./assets/img/horizon-tall-828.jpg   828w,
+              ./assets/img/horizon-tall-1290.jpg 1290w,
+              ./assets/img/horizon-tall-2048.jpg 2048w
+            "
+            sizes="100vw"
+            width="2048"
+            height="5120"
+            fetchpriority="high"
+            alt="The curved surface of a pickleball rising like a planet out of black, with three round holes near its crest"
+          />
+        </picture>
 
-    <main class="flex-1">
-      <section class="mx-auto w-full max-w-5xl px-6 py-24 sm:py-32">
-        <h1 class="max-w-3xl font-display text-4xl font-bold tracking-tight sm:text-6xl">
-          Placeholder headline
-        </h1>
-        <p class="mt-6 max-w-2xl text-lg text-muted">
-          Placeholder supporting copy that explains what is coming.
-        </p>
-      </section>
-
-      <section class="border-t border-line">
-        <div class="mx-auto grid w-full max-w-5xl gap-6 px-6 py-16 md:grid-cols-3">
-          <article class="rounded-card border border-line p-6">
-            <h2 class="font-display text-lg font-semibold">Feature one</h2>
-            <p class="mt-2 text-muted">Placeholder feature description.</p>
-          </article>
-          <article class="rounded-card border border-line p-6">
-            <h2 class="font-display text-lg font-semibold">Feature two</h2>
-            <p class="mt-2 text-muted">Placeholder feature description.</p>
-          </article>
-          <article class="rounded-card border border-line p-6">
-            <h2 class="font-display text-lg font-semibold">Feature three</h2>
-            <p class="mt-2 text-muted">Placeholder feature description.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="cta" class="border-t border-line">
-        <div class="mx-auto w-full max-w-5xl px-6 py-16">
-          <h2 class="font-display text-2xl font-semibold">Placeholder call to action</h2>
+        <div class="px-6 py-3 text-center">
           <a
-            href="#"
-            class="mt-6 inline-block rounded-card bg-brand px-5 py-3 font-medium text-white hover:opacity-90"
+            href="./"
+            class="-mr-[0.1em] inline-block font-display text-[clamp(42px,5.6vw,80px)] leading-none tracking-[0.1em] hover:text-muted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+            >OPEN</a
           >
-            Button label
+          <h1 class="mt-7 text-[clamp(20px,1.7vw,24px)] leading-[1.3] text-balance">
+            Your pickleball rating, always free.
+          </h1>
+        </div>
+      </main>
+
+      <footer
+        class="relative row-start-3 flex flex-col items-center gap-x-8 gap-y-1 self-end bg-primary px-[clamp(20px,3vw,40px)] pt-3 pb-[18px] text-[13px] leading-[1.4] tracking-[0.02em] text-secondary before:pointer-events-none before:absolute before:inset-x-0 before:bottom-full before:h-16 before:bg-linear-to-t before:from-primary before:to-transparent min-[520px]:flex-row min-[520px]:justify-between min-[520px]:pt-0 short:pb-0 footer-on-image:bg-transparent footer-on-image:pb-[18px] footer-on-image:text-[#d4d4d4] footer-on-image:before:hidden footer-bright:footer-on-image:text-secondary"
+      >
+        <div class="flex items-center gap-2.5">
+          <img src="./assets/img/mark.svg" alt="" width="24" height="24" class="size-6" />
+          <span><b>O</b>pen <b>P</b>ickleball <b>E</b>valuation <b>N</b>etwork</span>
+        </div>
+        <div class="flex items-center gap-0.5 footer-on-image:text-primary">
+          <span>Follow our progress</span>
+          <a
+            href="https://github.com/ccirrincione/open-ui"
+            aria-label="Follow OPEN on GitHub"
+            class="-mr-3 flex size-11 items-center justify-center hover:text-muted focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-current footer-on-image:hover:text-[#404040]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+              ></path>
+            </svg>
           </a>
         </div>
-      </section>
-    </main>
-
-    <footer class="border-t border-line">
-      <div class="mx-auto w-full max-w-5xl px-6 py-6 text-sm text-muted">Placeholder footer</div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Page not found · Open UI</title>
+    <title>Page not found · OPEN</title>
     <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#000000" />
     <!--
       GitHub Pages serves this file at whatever URL was missed, however deep, so relative
       links need a base. This works under /open-ui/ now and at the root on a custom domain.
@@ -15,13 +16,28 @@
       document.head.insertAdjacentHTML(
         "beforeend",
         `<base href="${root}">
+         <link rel="icon" href="assets/img/favicon-48.png" sizes="48x48" type="image/png">
          <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+         <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
          <link rel="stylesheet" href="assets/css/main.css">`,
       );
     </script>
   </head>
-  <body class="flex min-h-dvh flex-col items-center justify-center bg-paper px-6 font-body text-ink antialiased">
-    <h1 class="font-display text-4xl font-bold tracking-tight">Page not found</h1>
-    <a href="./" class="mt-6 font-medium text-brand hover:underline">Back to home</a>
+  <body
+    class="flex min-h-screen min-h-svh flex-col items-center justify-center bg-primary px-6 text-center font-body text-secondary antialiased"
+  >
+    <p
+      class="-mr-[0.1em] font-display text-[clamp(42px,5.6vw,80px)] leading-none tracking-[0.1em]"
+    >
+      OPEN
+    </p>
+    <h1 class="mt-7 text-[clamp(20px,1.7vw,24px)] leading-[1.3] text-balance">
+      This page doesn't exist.
+    </h1>
+    <a
+      href="./"
+      class="mt-5 inline-block text-[15px] underline underline-offset-4 hover:text-muted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+      >Go to the home page</a
+    >
   </body>
 </html>
