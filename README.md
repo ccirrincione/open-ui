@@ -1,5 +1,8 @@
 # open-ui
 
+> [!IMPORTANT]
+> **This repository is archived.** Its teaser, SvelteKit app, plans and agent tooling moved to [openpickleball/frontend](https://github.com/openpickleball/frontend), which serves www.openpb.org. Open issues and pull requests there.
+
 | Folder  | What it is                                         | Status                       |
 | ------- | -------------------------------------------------- | ---------------------------- |
 | `site/` | One-page teaser: static HTML + Tailwind CLI        | Live on GitHub Pages for now |
