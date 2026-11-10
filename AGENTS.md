@@ -1,5 +1,7 @@
 # open-ui
 
+This repository is archived. Make changes in [openpickleball/frontend](https://github.com/openpickleball/frontend) instead.
+
 | Folder   | What it is                                  | Guide                                |
 | -------- | ------------------------------------------- | ------------------------------------ |
 | `site/`  | Static teaser, live on GitHub Pages         | [site/AGENTS.md](site/AGENTS.md)     |
